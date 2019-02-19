@@ -8,12 +8,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{FDBAE5B7-7B5A-4625-A0E7-DFB54F126EDF}</ProjectGuid>
+    <ProjectGuid>{322DBBA7-3BF6-4531-82D7-6BA711D61A85}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CSharpWebClient</RootNamespace>
-    <AssemblyName>CSharpWebClient</AssemblyName>
+    <RootNamespace>CSharpWebClientPlain</RootNamespace>
+    <AssemblyName>CSharpWebClientPlain</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -45,12 +45,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Json, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Json.4.5.0\lib\netstandard2.0\System.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Net.Http.WebRequest" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -74,66 +68,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ActionJob.aspx" />
-    <Content Include="APIStrakerV00.css" />
-    <Content Include="FileJob4Translation.aspx" />
-    <Content Include="Global.asax" />
-    <Content Include="LanguagesList.aspx" />
-    <Content Include="License.txt" />
-    <Content Include="mainV00.aspx" />
-    <Content Include="RetrieveJobs.aspx" />
-    <Content Include="testgridview.aspx" />
+    <Content Include="main.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActionJob.aspx.cs">
-      <DependentUpon>ActionJob.aspx</DependentUpon>
+    <Compile Include="main.aspx.cs">
+      <DependentUpon>main.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ActionJob.aspx.designer.cs">
-      <DependentUpon>ActionJob.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CF.cs" />
-    <Compile Include="FileJob4Translation.aspx.cs">
-      <DependentUpon>FileJob4Translation.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FileJob4Translation.aspx.designer.cs">
-      <DependentUpon>FileJob4Translation.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="LanguagesList.aspx.cs">
-      <DependentUpon>LanguagesList.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="LanguagesList.aspx.designer.cs">
-      <DependentUpon>LanguagesList.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="RESTClient.cs" />
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="mainV00.aspx.cs">
-      <DependentUpon>mainV00.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="mainV00.aspx.designer.cs">
-      <DependentUpon>mainV00.aspx</DependentUpon>
+    <Compile Include="main.aspx.designer.cs">
+      <DependentUpon>main.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RetrieveJobs.aspx.cs">
-      <DependentUpon>RetrieveJobs.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="RetrieveJobs.aspx.designer.cs">
-      <DependentUpon>RetrieveJobs.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="testgridview.aspx.cs">
-      <DependentUpon>testgridview.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="testgridview.aspx.designer.cs">
-      <DependentUpon>testgridview.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -143,10 +89,6 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -161,9 +103,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>49282</DevelopmentServerPort>
+          <DevelopmentServerPort>49313</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:49282/</IISUrl>
+          <IISUrl>http://localhost:49313/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

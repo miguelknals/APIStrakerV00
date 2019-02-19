@@ -1,0 +1,47 @@
+﻿body {
+    font-family: Verdana;
+}
+.monospace {
+    font-family: "Courier New";
+}
+
+
+.title {
+    font-weight: bold;
+    font-size: larger;
+}
+
+.sansserif {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.pezquenina {
+    font-size: smaller;
+}
+
+input[type=text] {
+    font-family: Verdana;
+    /* font-size:11pt;
+        https://www.aspforums.net/Threads/119488/Set-Default-Font-Style-and-Size-for-TextBox-and-DropDownList-throughout-application-in-ASPNet/
+    */
+}
+
+select {
+    font-family: Verdana;
+    /* font-size:16pt; 
+        https://www.aspforums.net/Threads/119488/Set-Default-Font-Style-and-Size-for-TextBox-and-DropDownList-throughout-application-in-ASPNet/
+    */
+}
+
+table, th, td {
+    border: 1px; /* solid blue */
+}
+table {
+ 
+    border-spacing: 2px;
+    border-collapse: separate;
+}
+td {
+    padding: 2px
+    /* border: 1px solid black; */
+}

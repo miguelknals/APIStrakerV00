@@ -5,6 +5,12 @@ VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpWebClient", "CSharpWebClient\CSharpWebClient.csproj", "{FDBAE5B7-7B5A-4625-A0E7-DFB54F126EDF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpWebClientPlain", "CSharpWebClientPlain\CSharpWebClientPlain.csproj", "{322DBBA7-3BF6-4531-82D7-6BA711D61A85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrakerAPIConsoleClient", "StrakerAPIConsoleClient\StrakerAPIConsoleClient.csproj", "{B56E1523-E3FD-47AE-BD2D-78CCAC6C3641}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrakerAPIConsoleClientV2", "StrakerAPIConsoleClientV2\StrakerAPIConsoleClientV2.csproj", "{11D568B7-441B-4815-B0ED-F42D1BBE179E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{FDBAE5B7-7B5A-4625-A0E7-DFB54F126EDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDBAE5B7-7B5A-4625-A0E7-DFB54F126EDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDBAE5B7-7B5A-4625-A0E7-DFB54F126EDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{322DBBA7-3BF6-4531-82D7-6BA711D61A85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{322DBBA7-3BF6-4531-82D7-6BA711D61A85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{322DBBA7-3BF6-4531-82D7-6BA711D61A85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{322DBBA7-3BF6-4531-82D7-6BA711D61A85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B56E1523-E3FD-47AE-BD2D-78CCAC6C3641}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B56E1523-E3FD-47AE-BD2D-78CCAC6C3641}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B56E1523-E3FD-47AE-BD2D-78CCAC6C3641}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B56E1523-E3FD-47AE-BD2D-78CCAC6C3641}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11D568B7-441B-4815-B0ED-F42D1BBE179E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11D568B7-441B-4815-B0ED-F42D1BBE179E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11D568B7-441B-4815-B0ED-F42D1BBE179E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11D568B7-441B-4815-B0ED-F42D1BBE179E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
