@@ -127,7 +127,7 @@
                         <a href=https://help.strakertranslations.com/hc/en-us/categories/115000412453-stingRAY-Translation-API" target="_blank">Straker Translation API</a>.
                         Straker provides a Sandbox environment to run and these these API. <p>You can send a .Resx XML file or 
                             a text. The API will create a job to be processed inside Straker translation services.
-                            In a real enviroment the jobcvcxzv will be "COMPLETE" once the file is translated. In the demo 
+                            In a real enviroment the job will be "COMPLETE" once the file is translated. In the demo 
                             we have to "COMPLETE" the jobs manually. The returned file will be
                             returned untranslated.</p>
                         <p>Related info:</p>
