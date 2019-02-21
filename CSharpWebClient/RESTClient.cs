@@ -42,11 +42,21 @@ public class Job
     public int lead_time { get; set; }
     public string tl { get; set; }
     public string translation_type { get; set; }
+    // for text response
+    public List<TranslatedText> translated_text { get; set; }
+    public string payload { get; set; }
+
 }
 public class TranslatedFile
 {
     public string tl { get; set; }
     public string download_url { get; set; }
+}
+
+public class TranslatedText
+{
+    public string translation { get; set; }
+    public string tl { get; set; }
 }
 
 public class JobList
@@ -169,7 +179,7 @@ public class LanguageList
             // dentro de tarea síncrona string data = await response.Content.ReadAsStringAsync();
             string data = response.Content.ReadAsStringAsync().Result; // sin asycn y con Result;
             RootLanguages= JSserializer.Deserialize<RootObjectLanguages>(data); // respuesta convertida en clase.
-            info= CF.FormatOutput2HTML(data);
+            // info= CF.FormatOutput2HTML(data); // Raw JSON Response
             
         }
         else
@@ -193,75 +203,6 @@ public class LanguageList
 
 
 
-class RESTClientV2
-{
-    static HttpClient client = new HttpClient();
-
-    public class DataObject
-    {
-        public string Name { get; set; }
-    }
-
-    static async Task GetProductAsync()
-    {
-        HttpResponseMessage response = await client.GetAsync("");
-        if (response.IsSuccessStatusCode)
-        {
-            //var dataObjects = response.Content.ReadAsAsync<IEnumerable<DataObject>>().Result;  //Make sure to add a reference to System.Net.Http.Formatting.dll
-            //foreach (var d in dataObjects)
-            // {
-            //     Console.WriteLine("{0}", d.Name);
-            // }
-            Console.WriteLine("");
-        }
-        else
-        {
-            Console.WriteLine("{0} ({1})", (int)response.StatusCode, response.ReasonPhrase);
-        }
-
-        //Make any other calls using HttpClient here.
-
-        //Dispose once all HttpClient calls are complete. This is not necessary if the containing object will be disposed of; for example in this case the HttpClient instance will be disposed automatically when the application terminates so the following call is superfluous.
-        client.Dispose();
-    }
-
-
-    public void GetLanguages()
-    {
-        RunAsync().GetAwaiter().GetResult();
-    }
-
-    static async Task RunAsync()
-         {
-            // Update port # in the following line.
-             client.BaseAddress = new Uri("https://api.strakertranslations.com:443/v3/languages/");
-            client.DefaultRequestHeaders.Accept.Clear();
-             client.DefaultRequestHeaders.Accept.Add(
-                 new MediaTypeWithQualityHeaderValue("application/json"));
-
-            try
-            {
-                // Create a new product
-                // Get the product
-                await GetProductAsync();
-              
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-
-            Console.ReadLine();
-        }
-
-
-
-
-
-    
-
-
-}
 
 
 public class RESTClient

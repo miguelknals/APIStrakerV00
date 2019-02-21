@@ -10,7 +10,7 @@
 namespace CSharpWebClient {
     
     
-    public partial class mainV00 {
+    public partial class Text4Translation {
         
         /// <summary>
         /// form1 control.
@@ -22,67 +22,58 @@ namespace CSharpWebClient {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// lnkbFileJob4Translation control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkbFileJob4Translation;
+        protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
-        /// lnkbText4Translation control.
+        /// txtTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkbText4Translation;
+        protected global::System.Web.UI.WebControls.TextBox txtTitle;
         
         /// <summary>
-        /// lnkbRetrieveJobs control.
+        /// ddwSource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkbRetrieveJobs;
+        protected global::System.Web.UI.WebControls.DropDownList ddwSource;
         
         /// <summary>
-        /// lnkListAvailableLanguages control.
+        /// ddwTarget control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkListAvailableLanguages;
+        protected global::System.Web.UI.WebControls.DropDownList ddwTarget;
         
         /// <summary>
-        /// lnkShowHidePanel control.
+        /// txtText4Translate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkShowHidePanel;
+        protected global::System.Web.UI.WebControls.TextBox txtText4Translate;
         
         /// <summary>
-        /// pnlSettings control.
+        /// txtUriCallBack control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlSettings;
-        
-        /// <summary>
-        /// txtHost control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtHost;
+        protected global::System.Web.UI.WebControls.TextBox txtUriCallBack;
         
         /// <summary>
         /// txtToken control.
@@ -94,22 +85,49 @@ namespace CSharpWebClient {
         protected global::System.Web.UI.WebControls.TextBox txtToken;
         
         /// <summary>
-        /// btnSaveCookies control.
+        /// ddwWorkFlow control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSaveCookies;
+        protected global::System.Web.UI.WebControls.DropDownList ddwWorkFlow;
         
         /// <summary>
-        /// lblCookie control.
+        /// txtReservedWords control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCookie;
+        protected global::System.Web.UI.WebControls.TextBox txtReservedWords;
+        
+        /// <summary>
+        /// ddwPiority control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddwPiority;
+        
+        /// <summary>
+        /// txtPurchaseOrder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPurchaseOrder;
+        
+        /// <summary>
+        /// btnSend control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSend;
         
         /// <summary>
         /// lblOut control.

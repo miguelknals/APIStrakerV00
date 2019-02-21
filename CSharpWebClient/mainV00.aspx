@@ -19,7 +19,7 @@
         <div>
             <table>
                 <tr>
-                    <td class="title title">CSharpWebClient for Straker APIs&nbsp; Demo</td>
+                    <td class="title">CSharpWebClient for Straker APIs&nbsp; Demo</td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
@@ -41,7 +41,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:LinkButton ID="lnkbRetrieveJobs0" runat="server" OnClick="lnkbRetrieveJobs_Click">2 Submit a text for translation</asp:LinkButton>
+                        <asp:LinkButton ID="lnkbText4Translation" runat="server" OnClick="Text4Translation_Click">2 Submit a text for translation</asp:LinkButton>
                     </td>
                 </tr>
                 <tr>
@@ -127,17 +127,20 @@
                         <a href=https://help.strakertranslations.com/hc/en-us/categories/115000412453-stingRAY-Translation-API" target="_blank">Straker Translation API</a>.
                         Straker provides a Sandbox environment to run and these these API. <p>You can send a .Resx XML file or 
                             a text. The API will create a job to be processed inside Straker translation services.
-                            In a real enviroment the job will be "COMPLETE" once the file is translated. In the demo 
-                            we have to "COMPLETE" the jobs manually. The returned file will be
-                            returned untranslated.</p>
+                            In a real enviroment the job will be "COMPLETE" once the file is translated in Straker premises. In the demo we have to &quot;COMPLETE&quot; the jobs manually in the job list. The returned file will be returned translated if the source/target pair exists</p>
                         <p>Related info:</p>
-                        <ul><li>-You need to get a token for the Straker test sandbox 
-                             <a href=https://help.strakertranslations.com/hc/en-us/articles/115004055314-Getting-Started" target="_blank">in this page</a>.                          
+                        <ul>
+                            <li>A token is needed for most of the APIs. You can use mine by default or get yours&nbsp; <a href=https://help.strakertranslations.com/hc/en-us/articles/115004055314-Getting-Started" target="_blank">in this page</a>.                          
                             </li>
-                            -In order to read more about the job flow,                                                      
-                             <a href=https://help.strakertranslations.com/hc/en-us/articles/115004055334-How-it-Works" target="_blank">read this page</a>.                          
+                            <li>In order to read more about the job flow,                                                      
+                             <a href=https://help.strakertranslations.com/hc/en-us/articles/115004055334-How-it-Works" target="_blank">read this page</a>.                         
                             </li>
-                            <li>-These pages do not use any async feature and for clarity sake do not have any error verification.</li>
+                            <li>These pages do not use any async feature and for clarity sake do not have any error verification.</li>
+                            <li>Source code is available in 
+                             <a href="https://github.com/miguelknals/APIStrakerV00" target="_blank">https://github.com/miguelknals/APIStrakerV00</a>.                         
+                                Has been developed with VS 2017 Community (freely available).</li>
+                            <li>Feel free to contact me if you want.</li>
+                            
                         </ul>
 
                     </td>

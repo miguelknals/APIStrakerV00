@@ -76,13 +76,13 @@
   <ItemGroup>
     <Content Include="ActionJob.aspx" />
     <Content Include="APIStrakerV00.css" />
+    <Content Include="Text4Translation.aspx" />
     <Content Include="FileJob4Translation.aspx" />
     <Content Include="Global.asax" />
     <Content Include="LanguagesList.aspx" />
     <Content Include="License.txt" />
     <Content Include="mainV00.aspx" />
     <Content Include="RetrieveJobs.aspx" />
-    <Content Include="testgridview.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -94,6 +94,13 @@
       <DependentUpon>ActionJob.aspx</DependentUpon>
     </Compile>
     <Compile Include="CF.cs" />
+    <Compile Include="Text4Translation.aspx.cs">
+      <DependentUpon>Text4Translation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Text4Translation.aspx.designer.cs">
+      <DependentUpon>Text4Translation.aspx</DependentUpon>
+    </Compile>
     <Compile Include="FileJob4Translation.aspx.cs">
       <DependentUpon>FileJob4Translation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -126,13 +133,6 @@
     </Compile>
     <Compile Include="RetrieveJobs.aspx.designer.cs">
       <DependentUpon>RetrieveJobs.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="testgridview.aspx.cs">
-      <DependentUpon>testgridview.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="testgridview.aspx.designer.cs">
-      <DependentUpon>testgridview.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -12,7 +12,7 @@ using Laika;
 
 namespace CSharpWebClient
 {
-    public partial class FileJob4Translation : System.Web.UI.Page
+    public partial class Text4Translation : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -80,26 +80,6 @@ namespace CSharpWebClient
         {
             string auxS = "";
             lblOut.Text = "";
-            // tengo que guardar el archivo en un directorio temporal      
-            // se basa en https://msdn.microsoft.com/en-us/library/aa478971.aspx
-            HttpPostedFile file = Request.Files["myFile"];            
-            // string FileName = file.FileName; // da solo el nombre
-            string FileName = file.FileName;
-            string FileName2Upload = "c:\\tmp\\" + FileName;
-            try {
-
-                myFile.PostedFile.SaveAs(FileName2Upload);
-
-            }      
-                catch (Exception ex)
-            {
-                lblOut.Text = "Error trying to downlaod file ->  " + ex.ToString() +"<br>"  ;
-                return;
-            }
-            
-
-            var fs = new FileStream(FileName2Upload, FileMode.Open);
-            HttpContent fileStreamContent = new StreamContent(fs);
             // no se si va https://stackoverflow.com/questions/19141072/send-file-to-service-using-microsoft-net-http
 
             using (var client = new HttpClient()) // { 
@@ -139,14 +119,26 @@ namespace CSharpWebClient
                     formData.Add(new StringContent(auxS), "purchase_order");
                 }
 
-                formData.Add(fileStreamContent, "source_file" );
+                // last ting is the text  
+
+
+
+                auxS = txtText4Translate.Text.Trim();
+                auxS = CF.CleanInputString(auxS);
+                if (auxS != "")
+                {
+                    // aaa, bb, ccc 
+                    formData.Add(new StringContent(auxS), "payload");
+                }
+
+
                 client.BaseAddress = new Uri(Session["host"].ToString()); //  new Uri("https://sandbox.strakertranslations.com:443/");
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Session["token"].ToString());
 
                     auxS = "";
                 try
                 {
-                    var response = client.PostAsync("/v3/translate/file", formData).Result;
+                    var response = client.PostAsync("/v3/translate/text", formData).Result;
                     
                     if (!response.IsSuccessStatusCode)
                     {

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="FileJob4Translation.aspx.cs" Inherits="CSharpWebClient.FileJob4Translation" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Text4Translation.aspx.cs" Inherits="CSharpWebClient.Text4Translation" %>
 
 <!DOCTYPE html>
 <link rel="stylesheet" media="screen" href="APIStrakerV00.css" />
@@ -9,11 +9,7 @@
 .auto-style1 { height: 28px;}
 .auto-style2 { height: 25px; }
 
-        .auto-style3 {
-            width: 446px;
-        }
-
-    </style>
+        </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -26,7 +22,7 @@
                     <td class="auto-style2">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style2, title">Submits a file job for translation</td>
+                    <td class="auto-style2, title">Submits a text for translation</td>
                     <td class="auto-style2"></td>
                 </tr>
                 <tr>
@@ -65,10 +61,10 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style1">*Source file (XML only, p.e.
-                        u:\tmp\xm2translate.xml)</td>
+                    <td class="auto-style1">*Text</td>
                     <td class="auto-style1">
-                        <input type="file" id="myFile" name="myFile" runat="server" class="auto-style3" /></td>
+                        <asp:TextBox ID="txtText4Translate" runat="server" Height="114px" TextMode="MultiLine" Width="342px"></asp:TextBox>
+                    </td>
                 </tr>
                 <tr>
                     <td>Call back uri (URL for API post content and status)</td>

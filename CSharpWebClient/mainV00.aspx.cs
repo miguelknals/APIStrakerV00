@@ -26,7 +26,7 @@ namespace CSharpWebClient
                 {
                     // cookie format OPENÇhostÇportÇch
                     string s = myCookie.Value;
-                    string[] words = s.Split('Ç');
+                    string[] words = s.Split('#');
                     if (words.Count() == 3) // Cookie has 2 items
                     {
                         if (words[0].CompareTo("STRAKER") == 0) // first is open
@@ -84,7 +84,7 @@ namespace CSharpWebClient
 
             DateTime now = DateTime.Now;
             HttpCookie myCookie = Request.Cookies["CSharpWebClientCookie"];
-            string textValue = "STRAKER" + "Ç" + txtHost.Text + "Ç" + txtToken.Text; 
+            string textValue = "STRAKER" + "#" + txtHost.Text + "#" + txtToken.Text; 
             if (myCookie != null)
             {
                 myCookie.Value = textValue;
@@ -105,6 +105,7 @@ namespace CSharpWebClient
 
         protected void lnkListAvailableLanguages_Click(object sender, EventArgs e)
         {
+            // list of languages
             Session["host"] = txtHost.Text;
             Session["token"] = txtToken.Text;
             Response.Redirect("LanguagesList.aspx");         
@@ -113,9 +114,18 @@ namespace CSharpWebClient
 
         protected void lnkbFileJob4Translation_Click(object sender, EventArgs e)
         {
+            // Job for translation
             Session["host"] = txtHost.Text;
             Session["token"] = txtToken.Text;
             Response.Redirect("FileJob4Translation.aspx");
+        }
+
+        protected void Text4Translation_Click(object sender, EventArgs e)
+        {
+            // Text for translation
+            Session["host"] = txtHost.Text;
+            Session["token"] = txtToken.Text;
+            Response.Redirect("Text4Translation.aspx");
         }
 
         protected void lnkbRetrieveJobs_Click(object sender, EventArgs e)

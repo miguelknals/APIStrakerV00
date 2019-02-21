@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LanguagesList.aspx.cs" Inherits="CSharpWebClient.LanguagesList" %>
 
 <!DOCTYPE html>
-
+<link rel="stylesheet" media="screen" href="APIStrakerV00.css" />
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
@@ -9,14 +9,7 @@
         .auto-style1 {
             height: 25px;
         }
-        .auto-style2 {
-            height: 25px;
-            width: 10px;
-        }
-        .auto-style3 {
-            width: 10px;
-        }
-    </style>
+        </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -26,27 +19,17 @@
                     <td class="auto-style1">
                         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Go to main" />
                     </td>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style1">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style1">Available languages</td>
-                    <td class="auto-style2"></td>
-                    <td class="auto-style1"></td>
+                    <td class="title">Available languages</td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td>This is the list of availables languages. </td>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td>This is the list of availables languages: </td>
                 </tr>
                 <tr>
-                    <td>&nbsp;</td>
-                    <td class="auto-style3">&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
             </table>
@@ -66,6 +49,8 @@
         </asp:GridView>
         <br />
         <asp:Label ID="lblOut" runat="server"></asp:Label>
+         <br />
+            MIT License - Copyright 2019 miguel canals - <a href="http://www.mknals.com" target="_blank">www.mknals.com</a> 
     </form>
 </body>
 </html>

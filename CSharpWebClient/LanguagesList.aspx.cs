@@ -14,7 +14,9 @@ namespace CSharpWebClient
         {
             if (!IsPostBack)
             {
+
                 var DL = new LanguageList(Session["host"].ToString());
+                lblOut.Text = "";
                 DL.ObtenLista();
                 if (!DL.todoOK) {
                     lblOut.Text = string.Format("<font color='red'>[{0}]</font>", DL.info);
@@ -60,7 +62,7 @@ namespace CSharpWebClient
 
         protected void Button1_Click(object sender, EventArgs e)
         {            
-            Response.Redirect("mainV00.axpx");
+            Response.Redirect("mainV00.aspx");
         }
     }
 }

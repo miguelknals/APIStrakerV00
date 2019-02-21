@@ -34,8 +34,8 @@ namespace CSharpWebClient
             {
                 using (var formData = new MultipartFormDataContent())
                 {
-                    formData.Add(stringContentJob, "job_key"); 
-                    client.BaseAddress = new Uri("https://sandbox.strakertranslations.com:443/");
+                    formData.Add(stringContentJob, "job_key");
+                    client.BaseAddress = new Uri(Session["host"].ToString()); // "new Uri("https://sandbox.strakertranslations.com:443/");
                     client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Session["token"].ToString());
 
                     string auxS = "";
@@ -45,12 +45,12 @@ namespace CSharpWebClient
                         string auxS2 = "";
                         if  (action == "CANCEL")
                         {
-                            auxS2 = "v3/translate/cancel";
-
+                            auxS2 = "/v3/translate/cancel";
+                            
                         } else if (action == "COMPLETE")
                         {
                             auxS2 = "v3/translate/complete";                                               
-                        } else
+                        }  else
                         {
                             lblOut.Text += string.Format("<font color='red'>[{0}]</font>", "Internal error action should be CANCEL or COMPLETE");
                             return;

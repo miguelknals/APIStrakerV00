@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+
 
 namespace Laika // _04_test_ConexionPostgres
 {
@@ -99,5 +101,37 @@ namespace Laika // _04_test_ConexionPostgres
             return auxs;
         }
 
+        public static string CleanInputString (string tocleanS)
+        {
+            string auxS = "";
+            string pattern = @"\d\.(\n|\r|\r\n)\d";
+            var maches = Regex.Matches(tocleanS, pattern);
+            foreach (Match mach in maches)
+            {
+                auxS = mach.Groups[0].Value;
+                string auxS2 = auxS.Replace("\r\n", "");
+                auxS2 = auxS2.Replace("\n", "");
+                auxS2 = auxS2.Replace("\r", "");
+                tocleanS = tocleanS.Replace(auxS, auxS2);
+            }
+            // elipses
+            var regex = new Regex(@"\.(\n|\r|\r\n)\.");
+            Match match = regex.Match(tocleanS);
+            if (match.Success)
+            {
+                string strControl;
+                do
+                {
+                    strControl = tocleanS;
+                    tocleanS= tocleanS.Replace(".\r\n.", "..");
+                }
+                while (strControl.CompareTo(tocleanS) != 0);
+            }
+
+
+
+
+            return tocleanS;
+        }
     }
 }
