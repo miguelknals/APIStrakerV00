@@ -40,8 +40,10 @@ namespace CSharpWebClient
 
                 foreach (PropertyInfo property in properties)
                 {
-                    lblOut.Text += string.Format("{0} = {1} Type ({2})<br>", property.Name, property.GetValue(job, null),
-                        property.PropertyType);
+                    // Debug info
+                    // lblOut.Text += string.Format("{0} = {1} Type ({2})<br>", property.Name, property.GetValue(job, null),
+                    //    property.PropertyType);
+                    // 
 
                     campo = new BoundField();
                     campo.HeaderText = property.Name;
@@ -64,6 +66,9 @@ namespace CSharpWebClient
                                 dtt.Columns.Add("translated_file", property.PropertyType);
                                 dtt.Columns.Add("actionCan", property.PropertyType);
                                 dtt.Columns.Add("actionCom", property.PropertyType);
+                                dtt.Columns.Add("actual_translated_text", property.PropertyType);
+
+
                                 // and alo in the gridview
                                 campohlink = new HyperLinkField();
                                 campohlink.HeaderText = "trans_file";
@@ -89,8 +94,12 @@ namespace CSharpWebClient
                                 campohlink.DataNavigateUrlFormatString = "ActionJob.aspx?job_key={0}&action={1}";                                                               
                                 gdvJobs.Columns.Add(campohlink);
 
-                                
-
+                                                                campo = new BoundField();
+                                campo.HeaderText = "actual_translated_text";
+                                campo.DataField = "actual_translated_text"; 
+                                campo.ReadOnly = true;
+                                campo.Visible = true;
+                                gdvJobs.Columns.Add(campo);
 
                             }
                             break;
@@ -106,8 +115,9 @@ namespace CSharpWebClient
                     r = dtt.NewRow();
                     foreach (PropertyInfo property in properties)
                     {
-                        lblOut.Text += string.Format("{0} = {1} Type ({2})<br>", property.Name, property.GetValue(j, null),
-                        property.PropertyType);
+                        // for debug
+                        // lblOut.Text += string.Format("{0} = {1} Type ({2})<br>", property.Name, property.GetValue(j, null),
+                        // property.PropertyType);
                         string FieldType = property.PropertyType.ToString();
                         switch (FieldType)
                         {
@@ -117,13 +127,24 @@ namespace CSharpWebClient
                                 r[property.Name] = property.GetValue(j, null);
                                 if (property.Name == "status")
                                 {
-                                    if (r[property.Name].ToString() == "COMPLETED")
+                                    if (r[property.Name].ToString() == "COMPLETED" )
                                     {
                                         // translated we should look in the list
-                                        foreach (TranslatedFile tf in j.translated_file)
+                                        if (j.translation_type == "file")
                                         {
-                                            r["translated_file"] = tf.tl;
-                                            r["actual_hyperlink"] =tf.download_url;
+                                            foreach (TranslatedFile tf in j.translated_file)
+                                            {
+                                                r["translated_file"] = tf.tl;
+                                                r["actual_hyperlink"] = tf.download_url;
+                                            }
+                                        }
+                                        if (j.translation_type == "text")
+                                        {
+                                            foreach (TranslatedText tf in j.translated_text)
+                                            {
+                                                r["actual_translated_text"] = tf.translation;
+                                                
+                                            }
                                         }
 
                                     } else if (r[property.Name].ToString() == "QUEUED") 
