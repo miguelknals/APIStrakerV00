@@ -2,7 +2,9 @@
 
 The CSharpWebClient for Straker APIs Demo is a set of apsx pages using C# code behind and developed on Microsoft VS 2017 Community Edition (freely available). These pages provide an interface to the [Straker Translation API](https://help.strakertranslations.com/hc/en-us/categories/115000412453-stingRAY-Translation-API). [Straker Translations](https://www.strakertranslations.com) provides a Sandbox environment to run these API. The purpose of the site is to test these APIs. APIs can be called from any C# flavor (and obviously from other languages).
 
-You can find a live demo in [http://213.97.57.158/CSharpWebClient/mainV00.aspx](http://213.97.57.158/CSharpWebClient/mainV00.aspx). I cannot guarantee any level of service as this a private site and the API or the Straker policy service can change.
+You can find a live demo in [http://213.97.57.158/CSharpWebClient/mainV00.aspx](http://213.97.57.158/CSharpWebClient/mainV00.aspx). I cannot guarantee any level of service as this a private site and the API or the Straker policy service can change. There are the following options:
+
+[![Capture 01](capture01.GIF)](capture01.GIF) 
 
 ## 1.1 Submits a file job for translation / 1.2 Submit a text for translation 
 
@@ -19,12 +21,11 @@ This page will show the list of available languages. Remember this is a demo, so
 ## 1.5 Quick Guide
 
 - You need a token from Straker in order to call the Sandbox. You can use the default values o get your on token [here](https://help.strakertranslations.com/hc/en-us/articles/115004055314-Getting-Started). You only need to provide a email to receive it.
- [![Capture 01](capture01.GIF)](capture01.GIF) 
 - Select option **2 Submit a text for translation** to input a flat text and the translation options.
 [![Capture 02](capture02.GIF)](capture02.GIF) 
 - Select the option **3 Retrivies a list of jobs** to COMPLETE the job. (In a real enviroment this will happen once the translation is done).
-[![Capture 03](capture03.GIF)](capture03.GIF) 
 - The translation text or file will be in the list of jobs.
+- [![Capture 03](capture03.GIF)](capture03.GIF) 
 
 ## 1.6 Additional information and notes
 - The main help entry is in [Straker Translation Automation](https://www.strakertranslations.com/service/api/).
