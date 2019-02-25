@@ -8,7 +8,7 @@ using System.Text.RegularExpressions;
 
 namespace Laika // _04_test_ConexionPostgres
 {
-    public static class CF // al ser estática no hace falta crear instancia
+    public static class CF // al ser estática no hace falta crear instancias
     {
         public static string TrataNull (object kk)
         {
