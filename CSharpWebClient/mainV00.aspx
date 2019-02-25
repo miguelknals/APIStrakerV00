@@ -25,7 +25,7 @@
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td>Available APIs</td>
+                    <td>Web interface demo for Straker APIs:</td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>

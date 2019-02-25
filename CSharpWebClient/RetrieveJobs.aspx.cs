@@ -20,11 +20,11 @@ namespace CSharpWebClient
                 string token = Session["token"].ToString();
                 var instJobList = new JobList(host, token);
                 instJobList.ObtenListaJobs();
-                instJobList.todoOK = true;
+                // instJobList.todoOK = true;
                 if (!instJobList.todoOK)
                 {
-                    lblOut.Text = "Error retreiving job list" + "<br>";
-                    lblOut.Text += instJobList.info;
+                    lblOut.Text = "<font color ='red'> Error retreiving job list." + "<br>";
+                    lblOut.Text += instJobList.info + "</font> " + " < br >";
                     return;
                 }
                 // vamos a crea la tabla de datos y el datagrid view

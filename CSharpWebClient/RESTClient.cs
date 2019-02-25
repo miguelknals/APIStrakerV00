@@ -71,9 +71,57 @@ public class JobList
         host = vhost; token = vtoken;
         return;
     }
-    
 
     public void ObtenListaJobs()
+    {
+        info = "OK"; // optimismo
+        todoOK = true;
+        RootJobList = new RootObjectJobList();
+        HttpClient client = new HttpClient();
+        client.BaseAddress = new Uri(host); // "https://api.strakertranslations.com:443");
+
+
+        client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+        client.DefaultRequestHeaders.Accept.Add(
+        new MediaTypeWithQualityHeaderValue("application/json"));
+
+        HttpResponseMessage response = client.GetAsync("/v3/translate").Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
+                                                                                 // la forma síncrona (que hay que encapular en una "static async Task<xxx> Nombre(); es
+                                                                                 // HttpResponseMessage response = await client.GetAsync(path);
+                                                                                 //use JavaScriptSerializer from System.Web.Script.Serialization
+        JavaScriptSerializer JSserializer = new JavaScriptSerializer();
+        try
+        {
+            if (response.IsSuccessStatusCode)
+            {
+                string data = response.Content.ReadAsStringAsync().Result; // sin asycn y con Result;
+                RootJobList = JSserializer.Deserialize<RootObjectJobList>(data);
+                info = CF.FormatOutput2HTML(data);
+
+            }
+            else
+            {
+                todoOK = false;
+                info = string.Format("{0} ({1})", (int)response.StatusCode, response.ReasonPhrase);
+                return;
+            }
+            //Make any other calls using HttpClient here.
+            //Dispose once all HttpClient calls are complete. This is not necessary if the containing object will be disposed of; for example in this case the HttpClient instance will be disposed automatically when the application terminates so the following call is superfluous.
+        } finally
+        {
+            client.Dispose();
+        }
+        client.Dispose();
+        // let see there is data
+        if ( RootJobList.job == null  )
+        {
+            todoOK = false;
+            info = string.Format("There are no jobs. If you have a token add jobs. If you dont have a toke get one from Strakker");
+            return;
+        }
+        return;
+    }
+    public void ObtenListaJobs_OLD()
     {
         info = "OK"; // optimismo
         todoOK = true;

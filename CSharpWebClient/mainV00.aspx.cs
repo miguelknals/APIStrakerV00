@@ -90,7 +90,7 @@ namespace CSharpWebClient
                 myCookie.Value = textValue;
                 myCookie.Expires = now.AddYears(50); // Don't forget to reset the Expires property!
                 Response.SetCookie(myCookie);
-                lblCookie.Text = "<font color='green'>The cookie has been updated.</font>";
+                lblCookie.Text = "<font color='green'>The cookie has been updated.</font>";                
             }
             else
             { // does not exist
