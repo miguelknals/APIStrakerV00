@@ -9,10 +9,7 @@
         .auto-style1 {
             height: 25px;
         }
-        .auto-style4 {
-            height: 22px;
-        }
-    </style>
+        </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -113,35 +110,15 @@
                     <br />
             <table style="width:100%;">
                 <tr>
-                    <td class="auto-style4, title">Info</td>
-                    <td class="auto-style4"></td>
-                    <td class="auto-style4"></td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>These pages written in ASP.Net c# provide a simple interface to the 
-                        <a href=https://help.strakertranslations.com/hc/en-us/categories/115000412453-stingRAY-Translation-API" target="_blank">Straker Translation API</a>.
-                        Straker provides a Sandbox environment to run and these these API. <p>You can send a .Resx XML file or 
-                            a text. The API will create a job to be processed inside Straker translation services.
-                            In a real enviroment the job will be "COMPLETE" once the file is translated in Straker premises. In the demo we have to &quot;COMPLETE&quot; the jobs manually in the job list. The returned file will be returned translated if the source/target pair exists</p>
-                        <p>Related info:</p>
-                        <ul>
-                            <li>A token is needed for most of the APIs. You can use mine by default or get yours&nbsp; <a href=https://help.strakertranslations.com/hc/en-us/articles/115004055314-Getting-Started" target="_blank">in this page</a>.                          
-                            </li>
-                            <li>In order to read more about the job flow,                                                      
-                             <a href=https://help.strakertranslations.com/hc/en-us/articles/115004055334-How-it-Works" target="_blank">read this page</a>.                         
-                            </li>
-                            <li>These pages do not use any async feature and for clarity sake do not have any error verification.</li>
-                            <li>Source code is available in 
-                             <a href="https://github.com/miguelknals/APIStrakerV00" target="_blank">https://github.com/miguelknals/APIStrakerV00</a>.                         
-                                Has been developed with VS 2017 Community (freely available).</li>
-                            <li>Feel free to contact me if you want.</li>
-                            
-                        </ul>
+                    <td>
+
+<h4 id="1-6-mit-license">More info...</h4>
+<ul>
+<li>For more info visit my page <a href="http://www.mknals.com/04_4_CSharpWebClient.html" target="_blank">CSharpWebClient for Straker APIs Demo</a> or the github  <a href="https://github.com/miguelknals/APIStrakerV00" target="_blank">https://github.com/miguelknals/APIStrakerV00</a>. </li>
+<li>Feel free to contact me if you want miguelknals at gmail dot com. </li>
+</ul>
+
+
 
                     </td>
                     <td>&nbsp;</td>
